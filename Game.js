@@ -3,7 +3,7 @@ const settings = require('./settings.js')
 const DICE = [
     'AACIOT'.split(''),
     'ABILTY'.split(''),
-    'ABJMO'.split('').push('Qu'),
+    'ABJMO'.split(''),
     'ACDEMP'.split(''),
     'ACELRS'.split(''),
     'ADENVZ'.split(''),
@@ -18,9 +18,9 @@ const DICE = [
     'ELPSTU'.split(''),
     'GILRUW'.split(''),
 ]
+DICE[2].push('Qu')
 
 module.exports = {
-    CHARACTERS: CHARACTERS,
     EMPTY: ['','','','','','','','','','','','','','','',''],
     countdown: false,
     state: {
