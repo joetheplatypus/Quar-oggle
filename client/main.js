@@ -2,6 +2,8 @@ const canvas = document.getElementById('canvas');
 const clock = document.getElementById('timer');
 const btn_newround = document.getElementById('new_round');
 const scoreboard = document.getElementById('scoreboard-text');
+const body = document.getElementById('body');
+const audio = document.getElementById('audio');
 const socket = io();
 
 socket.on('update', (data) => {
@@ -18,6 +20,7 @@ function updateGrid(letters) {
     }
 }
 
+let playedAudio = false;
 function updateClock(timer) {
     const minutes = Math.floor(timer/60);
     let seconds = (timer % 60);
@@ -27,9 +30,16 @@ function updateClock(timer) {
     clock.innerText = minutes + ':' + seconds;
 
     if(timer === 0) {
-        clock.classList.add('flash')
+        if(!playedAudio) {
+            body.classList.add('flash')
+            audio.play()
+            setTimeout(() => {audio.pause()}, '1500')
+            playedAudio = true;
+        } else {
+            body.classList.remove('flash')
+        }
     } else {
-        clock.classList.remove('flash')
+        playedAudio = false;
     }
 }
 

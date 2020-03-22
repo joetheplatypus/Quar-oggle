@@ -21,20 +21,17 @@
             }
             #scoreboard {
                 position: absolute;
-                top: 87%;
-                height: 200px;
-                width: 600px;
-                margin-top: -213px;
-                right:50%;
-                margin-right: -300px;
+                top: 20px;
+                height: 400px;
+                width: 200px;
+                right:20px;
             }
             #timer {
                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 position: absolute;
-                top: 20px;
-                left: 50%;
+                top: 10px;
+                left: 15px;
                 font-size: 50px;
-                margin-left: -44px;
             }
             #new_round {
                 font-size: 20px;
@@ -45,13 +42,21 @@
                 padding: 15px;
             }
             .flash {
-                color: red;
+                animation-name: flash_red;
+                animation-duration: 2s;
+            }
+            @keyframes flash_red {
+                0% {background-color: white}
+                50% {background-color: red}
+                100% {background-color: white}
             }
         </style>
     </head>
-    <body>
+    <body id="body">
 
-        <div id="timer" class="flash">
+        <audio id="audio" src="alarm.wav" type="audio/wav"></audio>
+
+        <div id="timer">
             0:00
         </div>
 
