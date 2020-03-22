@@ -20,7 +20,7 @@ function updateGrid(letters) {
     }
 }
 
-let playedAudio = false;
+let playedAudio = true;
 function updateClock(timer) {
     const minutes = Math.floor(timer/60);
     let seconds = (timer % 60);
