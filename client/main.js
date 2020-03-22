@@ -10,7 +10,7 @@ socket.on('update', (data) => {
     console.log(data)
     updateGrid(data.letters);
     updateClock(data.timer);
-    updateScoreboard(data.scoreboard)
+    updateScoreboard(data.scoreboard);
 })
 
 function updateGrid(letters) {
