@@ -1,7 +1,10 @@
 const settings = require('./settings.js')
 
+const CHARACTERS = 'ABCDEFGHIJKLMNOPRSTUVWXYZ'.split('')
+CHARACTERS.push('Qu');
+
 module.exports = {
-    CHARACTERS: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''),
+    CHARACTERS: CHARACTERS,
     EMPTY: ['','','','','','','','','','','','','','','',''],
     countdown: false,
     state: {
