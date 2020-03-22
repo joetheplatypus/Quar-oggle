@@ -33,7 +33,7 @@ function updateClock(timer) {
         if(!playedAudio) {
             body.classList.add('flash')
             audio.play()
-            setTimeout(() => {audio.pause()}, '1500')
+            setTimeout(() => {audio.pause()}, '3000')
             playedAudio = true;
         } else {
             body.classList.remove('flash')
