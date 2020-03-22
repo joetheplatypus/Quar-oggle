@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Quar-oggle</title>
+        <script type="module" src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+        <style>
+            td {
+                border: 1px solid black;
+                width: 90px;
+                height: 90px;
+                text-align: center
+            }
+            table {
+                font-size: 70px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                position: absolute;
+                left: 50%;
+                top: 40%;
+                margin-left: -200px;
+                margin-top:-215px;
+            }
+            #scoreboard {
+                position: absolute;
+                top: 87%;
+                height: 200px;
+                width: 600px;
+                margin-top: -213px;
+                right:50%;
+                margin-right: -300px;
+            }
+            #timer {
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                font-size: 50px;
+                margin-left: -44px;
+            }
+            #new_round {
+                font-size: 20px;
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                margin-left: -66px;
+                padding: 15px;
+            }
+            .flash {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="timer" class="flash">
+            0:00
+        </div>
+
+        <div id="scoreboard">
+            Scoreboard:
+            <textarea id="scoreboard-text" style="width: 100%; height: 100%;"></textarea>
+        </div>
+
+        <table>
+            <tr>
+                <td id="grid1"></td>
+                <td id="grid2"></td>
+                <td id="grid3"></td>
+                <td id="grid4"></td>
+            </tr>
+            <tr>
+                <td id="grid5"></td>
+                <td id="grid6"></td>
+                <td id="grid7"></td>
+                <td id="grid8"></td>
+            </tr>
+            <tr>
+                <td id="grid9"></td>
+                <td id="grid10"></td>
+                <td id="grid11"></td>
+                <td id="grid12"></td>
+            </tr>
+            <tr>
+                <td id="grid13"></td>
+                <td id="grid14"></td>
+                <td id="grid15"></td>
+                <td id="grid16"></td>
+            </tr>
+        </table>
+
+        <button id="new_round">New Round</button>
+    </body>
+</html>
